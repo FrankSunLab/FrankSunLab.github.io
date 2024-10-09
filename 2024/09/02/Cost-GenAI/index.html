@@ -15,7 +15,7 @@
 
 
 
-<title>INFO | LAW, ECONOMICS AND INFO SYSTEM</title>
+<title>What is the estimated cost to build an enterprise-grade GenAI solution? | LAW, ECONOMICS AND INFO SYSTEM</title>
 
 
 
@@ -135,76 +135,11 @@
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    var tocbot_timer;
-    var DEPTH_MAX = 6; // 为 6 时展开所有
-    var tocbot_default_config = {
-        tocSelector: '.tocbot-list',
-        contentSelector: '.post-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        orderedList: false,
-        scrollSmooth: true,
-        onClick: extend_click,
-    };
-
-    function extend_click() {
-        clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function() {
-            tocbot.refresh(obj_merge(tocbot_default_config, {
-                hasInnerContainers: true
-            }));
-        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
-    }
-
-    document.ready(function() {
-        tocbot.init(obj_merge(tocbot_default_config, {
-            collapseDepth: 1
-        }));
-    });
-
-    function expand_toc() {
-        var b = document.querySelector('.tocbot-toc-expand');
-        var expanded = b.getAttribute('data-expanded');
-        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, {
-            collapseDepth: expanded ? 1 : DEPTH_MAX
-        }));
-        b.innerText = expanded ? 'Expand all' : 'Collapse all';
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function obj_merge(target, source) {
-        for (var item in source) {
-            if (source.hasOwnProperty(item)) {
-                target[item] = source[item];
-            }
-        }
-        return target;
-    }
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">INFO</h1>
+            <h1 class="post-title">What is the estimated cost to build an enterprise-grade GenAI solution?</h1>
             
                 <div class="post-meta">
                     
@@ -213,7 +148,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">August 21, 2022&nbsp;&nbsp;13:38:11</a>
+                        Date: <a href="#">September 2, 2024&nbsp;&nbsp;19:25:35</a>
                         </span>
                     
                     
@@ -222,16 +157,33 @@
         </header>
 
         <div class="post-content">
-            <h1 id="ABOUT-FRANK"><a href="#ABOUT-FRANK" class="headerlink" title="ABOUT FRANK"></a>ABOUT FRANK</h1><p>An researcher learning with a subtle interdiscipline created by the world. </p>
-<h1 id="ABOUT-THE-SITE"><a href="#ABOUT-THE-SITE" class="headerlink" title="ABOUT THE SITE"></a>ABOUT THE SITE</h1><p>You would know Frank better by reading the site, know who he is, what he learn, what is his hobby, …</p>
-<p>understand people in this way is efficient, elegant,complete, and time saving</p>
-<h1 id="TAG"><a href="#TAG" class="headerlink" title="TAG"></a>TAG</h1><ul>
-<li>Years of experience in designing &amp; building Information System</li>
-<li>A big fan of Economics, Mathematics, Finance, History, Computer Science, Laws, …</li>
-<li>Paradox gamer, a perfect information system in game field</li>
-<li>Lifelong learner, MOOC learner, thanks for the open course published by varies of University around the world; Coursera user</li>
-<li>Certified data engineer, data architect, data analyst by varies of platform and companies, such as Microsoft, Qlik, Dataiku, Datacamp…</li>
-</ul>
+            <p>What is the estimated cost to build an enterprise-grade GenAI solution</p>
+<p>Here are the answers from ChatGPT, Copilot, and a blog. But before we look at these numbers, what is your estimation?</p>
+<p>Summary of the total costs:</p>
+<p>Total cost estimation provided by ChatGPT</p>
+<blockquote>
+<p>For a Medium-Scale Solution: $300,000 - $1M&#x2F;year.<br>For a Large-Scale Enterprise Solution: $1M - $5M&#x2F;year or more, especially if aiming for a highly customized solution with a focus on scalability and robust infrastructure.</p>
+</blockquote>
+<p>Total cost estimation provided by Copilot</p>
+<blockquote>
+<p>$215,000 - $2.6M</p>
+</blockquote>
+<p>Total cost estimation from scaleupally.io</p>
+<blockquote>
+<p>Total estimated cost range from $600,000 to $1,500,000 for the initial development phase, with ongoing annual costs ranging from $350,000 to $820,000.</p>
+</blockquote>
+<p>Detailed breakdown:</p>
+<p>ChatGPT:</p>
+<blockquote>
+<p>The cost to build an enterprise-grade Generative AI (GenAI) solution can vary widely based on factors such as scale, infrastructure, the complexity of the model, and customization needs. Below is a breakdown of the typical cost components, with rough estimates for each:<br>1.Infrastructure Costs<br>Cloud Services: Costs for compute resources (GPUs&#x2F;TPUs) and storage.<br>Small-scale deployment (testing&#x2F;prototyping): ~$5,000 - $20,000&#x2F;month.<br>Large-scale deployment (enterprise use with heavy traffic): ~$50,000 - $200,000&#x2F;month.<br>On-premise Setup: If hosting internally, upfront hardware purchases can range from $200,000 - $500,000+, depending on the scale and performance needs.<br>2.Model Development Costs<br>Pre-trained Model Licensing: Some large models (e.g., GPT-4, LLaMA, or other proprietary models) may require licensing fees.<br>Costs can range from $10,000 to $200,000+ per year depending on the model and usage rights.<br>Custom Model Training: If training from scratch or fine-tuning a large pre-trained model with proprietary data:<br>Data gathering and preprocessing: $10,000 - $100,000.<br>Model training (using rented cloud GPUs&#x2F;TPUs): $100,000 - $1M+ for large-scale models.<br>Specialist Costs: Hiring data scientists, ML engineers, and MLOps professionals for model development and deployment.<br>Salaries can vary but might range from $150,000 - $300,000&#x2F;year per person.<br>3.Software and Tools<br>ML Platforms (e.g., Databricks, Azure ML, TensorFlow Serving): Subscriptions and usage fees can range from $10,000 - $50,000&#x2F;year.<br>APIs and Integrations: Costs for using APIs to integrate AI capabilities with other enterprise systems like CRMs, ERPs, or customer service platforms.<br>4.Data Storage &amp; Management<br>Data Storage Costs: Depending on the volume of data and storage solutions (hot vs. cold storage):<br>$5,000 - $50,000+&#x2F;month.<br>Data Security &amp; Compliance: Especially critical in highly regulated industries.<br>Compliance audits, certifications (e.g., GDPR, HIPAA): $10,000 - $50,000+&#x2F;year.<br>Enhanced security measures and encryption can add additional costs.<br>5.Maintenance &amp; Updates<br>Ongoing Model Fine-tuning: Fine-tuning the model with new data and adapting to changes in business requirements can require $10,000 - $100,000&#x2F;year.<br>Technical Support &amp; Monitoring: For maintaining uptime, troubleshooting, and performance monitoring, costs can be $50,000 - $150,000&#x2F;year.<br>Total Estimated Cost<br>For a Medium-Scale Solution: $300,000 - $1M&#x2F;year.<br>For a Large-Scale Enterprise Solution: $1M - $5M&#x2F;year or more, especially if aiming for a highly customized solution with a focus on scalability and robust infrastructure.<br>These estimates are highly variable and depend on factors like whether you��re building in-house or leveraging external vendors, the complexity of the use case, and the scale of the deployment. The long-term ROI can be substantial, especially when the solution enables improved decision-making, customer engagement, or process automation.</p>
+</blockquote>
+<p>Copilot:</p>
+<blockquote>
+<p>Model Training: $100,000 to $1 million or more<br>Infrastructure: $50,000 to $500,000 per month, depending on scale and complexity<br>Development and Maintenance: $5,000 to $500,000, depending on the level of sophistication and scale<br>Operational Costs: $50,000 to $500,000 per month, depending on the scale of operations<br>Scalability: $10,000 to $100,000 and up, depending on the complexity and data processing needs</p>
+</blockquote>
+<p>Scaleupally.io:</p>
+<p>You can access the blog post by scaleupally.io here: <a target="_blank" rel="noopener" href="https://scaleupally.io/blog/cost-to-build-generative-ai/">https://scaleupally.io/blog/cost-to-build-generative-ai/</a></p>
+<p><strong>Disclaimer: The data provided above is for reference purposes only. It is intended as food for thought rather than a concrete guideline for running a GenAI business. Please evaluate this information carefully before applying it. I am not responsible for any misuse or negative consequences that may arise from the application of this information. This article is for study purposes only and is not intended for business use.</strong></p>
 
         </div>
 
@@ -246,7 +198,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://franksunlab.github.io/2022/08/21/About-this-site/">https://franksunlab.github.io/2022/08/21/About-this-site/</a></span>
+                        <span><a href="https://franksunlab.github.io/2024/09/02/Cost-GenAI/">https://franksunlab.github.io/2024/09/02/Cost-GenAI/</a></span>
                     </p>
                 
                 
@@ -264,10 +216,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/Main/"># Main</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -278,8 +226,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2024/09/02/Cost-GenAI/">What is the estimated cost to build an enterprise-grade GenAI solution?</a>
+                <a class="prev" rel="prev" href="/2024/10/01/Operational-Ratios-by-Company/">Operational Ratios by Company</a>
             
+            
+            <a class="next" rel="next" href="/2022/08/21/About-this-site/">INFO</a>
             
         </section>
 
