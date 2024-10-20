@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Frank">
+
+
+    <meta name="subtitle" content="Frank's Lab">
+
+
+
+
+<title>Mechanism Design and SCM | LAW, ECONOMICS AND INFO SYSTEM</title>
+
+
+
+    <link rel="icon" href="/temp1.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+<!-- MathJax support -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Frank&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Frank&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Mechanism Design and SCM</h1>
+            
+                <div class="post-meta">
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">October 20, 2024&nbsp;&nbsp;16:45:42</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2> Introduction </h2>
+
+<img src="/source/str.jpg" alt="Alt text" width="400" height="300">
+
+<p>In today’s economy, supply chain management (SCM) plays a crucial role in ensuring efficiency and effectiveness across various industries. As organizations strive to optimize their supply chains, the principles of mechanism design offer valuable insights into aligning individual incentives with overall system goals. This article explores the intersection of SCM and mechanism design, highlighting key concepts, practical applications, and relevant case studies.</p>
+<h2> Real-Life Example: Braess's Paradox</h2>
+When you drive to your destination,e.g., your home, having two route options may work well; however, after introducing a one-way bridge, the situation can worsen. This bridge offers some flexibility, as it allows drivers on Road A to switch to Road B, creating an additional route for those wanting to avoid congestion. Initially, this seems like it could help alleviate traffic; however, as more drivers start taking advantage of this new option, the newly accessible route can quickly become overcrowded. The result is that instead of improving the overall flow of traffic, the one-way bridge inadvertently leads to increased congestion and longer travel times for everyone.
+The animation below illustrates this phenomenon: the upper section shows the statistics without the bridge, while the lower section displays the statistics with the bridge. Clearly, the lower section depicts a worse situation compared to the upper one.</br>
+
+<video width="640" height="360" controls>
+    <source src="/source/md_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<p>This phenomenon is known as Braess’s Paradox, a well-known concept in mechanism design-game theory that illustrates how adding a new route can inadvertently cause congestion and inefficiency when individual users act in their self-interest. As you can see, this concept also applies to the context of supply chain management (SCM). Just as drivers may create delays by optimizing their own routes without considering the overall traffic flow, teams within a supply chain may prioritize their own performance metrics at the expense of the system’s efficiency. Most importantly, sometimes an investment aimed at improving processes can exacerbate the situation, leading to unintended consequences. This highlights the critical need for coordinated decision-making in SCM to ensure that individual goals align with the collective objective of optimizing the entire supply chain.</p>
+<h2> Understanding Supply Chain Management (SCM)</h2>
+
+<img src="/source/scm.jpg" alt="Alt text" width="400" height="300">
+
+<p>Supply chain management encompasses a series of processes, including procurement, production, and distribution, that work together to deliver goods and services to customers. The optimization of these processes is essential for enhancing efficiency and reducing costs. Effective decision-making is at the heart of SCM, involving collaboration among various stakeholders such as suppliers, manufacturers, and retailers.</p>
+<h2>Introduction to Mechanism Design</h2>
+Mechanism design is a branch of economic theory focused on creating systems or mechanisms that facilitate desired outcomes by aligning the interests of different parties. It emphasizes the importance of designing contracts, incentive structures, and collaborative frameworks that encourage cooperation within the supply chain. The successful implementation of mechanism design can lead to improved performance and enhanced supply chain resilience.
+<h2> Connection Between SCM and Mechanism Design</h2>
+The principles of mechanism design can significantly enhance SCM by promoting collaboration and optimizing resource allocation. For instance, mechanisms such as incentive structures and information-sharing protocols can help align the interests of suppliers and retailers. Transparency and communication are essential in facilitating better decision-making and fostering trust among supply chain partners.
+<h2> Case Study: Braess's Paradox in SCM</h2>
+Braess's Paradox illustrates how introducing a new route can sometimes lead to worse outcomes, such as increased congestion and delays. In a supply chain context, this paradox can manifest when a new transport route or cross-docking facility is added, attracting more shipments and creating bottlenecks. By examining the assumptions underlying this scenario-such as self-optimizing behavior among teams and limited capacity at the new facility we can understand how individual decisions can disrupt overall efficiency.
+
+<h2> Conclusion</h2>
+Integrating mechanism design into SCM practices offers significant potential for improving overall supply chain performance. By aligning individual incentives with collective goals, organizations can enhance collaboration, reduce inefficiencies, and create more resilient supply chains. Further exploration of this intersection may yield innovative solutions and drive advancements in both fields.
+
+<h2> References</h2>
+1.Rasmussen, L. and Wilensky, U. (2019). NetLogo Braess Paradox model.Retrieved from http://ccl.northwestern.edu/netlogo/models/BraessParadox. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.Wilensky, U. (1999). NetLogo. Retrieved from http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+The model utilized in this study is based on the NetLogo Braess Paradox model (Rasmussen & Wilensky, 2019) and was developed using the NetLogo software (Wilensky, 1999)."
+<h2> Disclaimer:</h2>
+This article incorporates insights from various sources, including academic articles, and AI-based support from ChatGPT. While ChatGPT provided foundational explanations and examples, additional references contributed further perspectives and data. My role involved synthesizing these insights, critically evaluating them, and structuring the content to present a cohesive narrative.
+
+        </div>
+
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/10/01/Operational-Ratios-by-Company/">Operational Ratios by Company</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Frank | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
